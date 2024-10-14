@@ -3,120 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Personal Website</title>
-    <style>
-        /* 基本样式 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-        }
-
-        /* 页眉样式 */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        /* 主体内容样式 */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .about {
-            text-align: center;
-        }
-
-        .about img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        /* 按钮样式 */
-        .contact-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .contact-button:hover {
-            background-color: #555;
-        }
-
-        /* 页脚样式 */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Liang Chen - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 页眉 -->
+    <!-- top title -->
     <header>
-        <h1>John Doe</h1>
-        <p>Web Developer | Designer | Tech Enthusiast</p>
+        <h1>Leo Johnson</h1>
+        <p>HongKong Polytechnic University | MSc IT</p>
     </header>
 
-    <!-- 主体内容 -->
+    <!-- main body -->
     <div class="container">
         <section class="about">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h2>About Me</h2>
-            <p>Hello! I'm John Doe, a passionate web developer with experience in creating dynamic and responsive websites. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+            <img src="Images/profile.jpg" alt="Profile Pic" class="img_style1">
+            <h2 class="about_left_title">Name & Nickname:</h2>
+            <p class="left_text_form1">Leo.Johnson</p>
         </section>
 
         <section class="skills">
-            <h2>Skills</h2>
-            <p>HTML, CSS, JavaScript, React, Node.js, Python</p>
+            <h2 class="skill_left_title">Skills:</h2>
+            <p class="skill_left_text_form1">Python, C++, C#, MySQL, HTML,etc.</p>
         </section>
 
-        <section class="projects">
-            <h2>Projects</h2>
+        <section class="introduction">
+            <h2 class="introduction_title">Introduction:</h2>
+            <p class="introduction_text">I'm Leo.Johnson, a passionate student from HongKong Polytechnical University. I love to work with technologies like computer graphics, rendering and GPU acceleration.</p>
+            <p class="introduction_text">My hometown is GuangZhou, in GuangDong province, China. I finish my undergraduation in JNU, major in computer science. In 2023 fall, I was admitted to PolyU as a MSc IT.</p>
+        </section>
+
+        <section class="interest">
+            <h2 class="interest_title">Interest:</h2>
             <ul>
-                <li><strong>Portfolio Website</strong> - A showcase of my work and skills.</li>
-                <li><strong>Weather App</strong> - A weather forecasting app using OpenWeatherMap API.</li>
-                <li><strong>To-Do List App</strong> - A simple to-do list app built with React.</li>
+                <li><strong>Physical Engine:</strong>  The techniques about physical engine like Unity, Unreal, and game developing.</li>
+                <li><strong>Computer Graphics:</strong>  The techniques of CG and GPU acceleration is attracting for myself.</li>
+                <li><strong>Computer Visions:</strong>  Especially, use the AI mode to recognize the images and experience changes.</li>
             </ul>
+
+        </section>
+        <!-- playlist -->
+        <section class="playlist">
+            <h2>My Playlist</h2>
+            <audio controls>
+                <source src="Music/グリーングリーンズ.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <audio controls>
+                <source src="Music/飛べ! 星のカービィ.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Here, you can listen to the song I recommended.</p>
         </section>
 
-        <a href="mailto:your.email@example.com" class="contact-button">Contact Me</a>
+        <section class="outerlink">
+            <h2>Recommended Webpage</h2>
+            <p class="outerlink_head">You can check this outer links and enjoy yourself by the following interesting webpages:</p>
+            <p class="outerlink_list">Weights&Biases, an AI developer platform which can deploy and fine-tuning models:</p>
+            <a href="https://wandb.ai/site" target="_blank">Go now!</a>
+            <p class="outerlink_list">A blog that introducing the basis of building 2D pixel arts, interesting type of games:</p>
+            <a href="https://gamemaker.io/zh-CN/blog/make-pixel-art-2d-games" target="_blank">Go now!</a>
+            <p class="outerlink_list">Documentation for Unity HDRP, useful and essential for the developer:</p>
+            <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@15.0/manual/index.html" target="_blank">Go now!</a>
+
+        </section>
+        
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <form action="javascript:void(0);" onsubmit="showMessageBox()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
+        <!-- show the floating windows -->
+        <div id="messageBox" class="message-box">
+            <div class="message-content">
+                <p>Thank you! Your message has been sent successfully.</p>
+                <button onclick="closeMessageBox()">Close</button>
+            </div>
+        </div>
+
+        <!-- the JS script banding to the messagebox-->
+        <script>
+            function showMessageBox() {
+                document.getElementById("messageBox").style.display = "flex";
+            }
+
+            function closeMessageBox() {
+                document.getElementById("messageBox").style.display = "none";
+            }
+        </script>
+
+        <section class="skills_bar">
+            <h2>Level of Skills</h2>
+            <div class="skill">
+                <label for="PE-skill">Physis Engine(Especially for UE, Unity.)</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 35%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label for="CG-skill">Computer Graphics(Such as GPU acceleration, rendering.)</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 25%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label for="CV-skill">Computer Vision(Studying and intership)</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                </div>
+            </div>
+        </section>
+
+
     </div>
 
-    <!-- 页脚 -->
+    <!-- footer -->
     <footer>
         <p>&copy; 2024 John Doe. All rights reserved.</p>
+
     </footer>
+
+
 
 </body>
 </html>

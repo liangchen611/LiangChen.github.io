@@ -1,0 +1,76 @@
+    /* 基本样式 */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f4f4f9;
+    }
+
+    /* 页眉样式 */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        color: #0094ff
+    }
+
+    /* 主体内容样式 */
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    /* 按钮样式 */
+    .contact-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .contact-button:hover {
+        background-color: #555;
+    }
+
+    /* 页脚样式 */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+假设我定义了一个类选择器，并设置了一个width属性，然后在此类选择器下又定义子选择器，在它之下也设置了width属性，那么创建此子选择器类型的对象时，它的width属性取决于哪个选择器？

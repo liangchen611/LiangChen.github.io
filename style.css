@@ -1,0 +1,254 @@
+    /* basic form of the body */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f4f4f9;
+        background: linear-gradient(135deg, #f0f0f0 25%, #d3d3d3 100%);
+        animation: gradientBackground 10s infinite alternate;
+    }
+
+    @keyframes gradientBackground {
+        0% { background: #f0f0f0; }
+        100% { background: #d3d3d3; }
+    }
+
+    /* header component */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        color: #0094ff
+    }
+
+    /* the container component of the body */
+    .container {
+        max-width: 900px;
+        margin: 10px auto;
+        padding: 25px;
+        background-color: #f4f4f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .about .img_style1 {
+        height: 200px;
+        float: left;
+        border-radius: 15%; 
+        border: 2px solid #333;
+        margin-right: 10px;
+    }
+
+    .about .about_left_title{
+        text-align: left;
+        margin-bottom: 5px
+    }
+
+    .about .left_text_form1{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .skills {
+        text-align: center
+    }
+
+    .skills .skill_left_title{
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .skills .skill_left_text_form1{
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    /* introduction component*/
+    .introduction {
+        
+    }
+
+    .introduction .introduction_title{
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .introduction .introduction_text{
+        text-align: left;
+        font-size: 18px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    /* interest component*/
+    .interest {
+
+    }
+
+    .interest .interest_title{
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 5px;        
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1;
+    }
+
+    /* play audio component*/
+    .playlist {
+
+    }
+
+    .playlist p{
+        margin-top:5px;
+    }
+
+    /* outlink component*/
+    .outerlink {
+
+    }
+
+    .outerlink .outerlink_head{
+        font-weight: bold;
+        margin-bottom:3px;
+    }
+
+    .outerlink .outerlink_list{
+        margin-bottom:3px;
+    }
+
+    /* contact submit form component*/
+    .contact {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact h2{
+        margin-top:0.5px;
+    }
+
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact input, .contact textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .contact input[type="submit"] {
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+
+    .contact input[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    /* floating windows component */
+    .message-box {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .message-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: 300px;
+    }
+
+    .message-content p {
+        margin: 0 0 10px 0;
+    }
+
+    .message-content button {
+        padding: 8px 16px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .message-content button:hover {
+        background-color: #555;
+    }
+
+    /* bar components*/
+    .skills_bar {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .progress-bar {
+        background-color: #eee;
+        border-radius: 3px;
+        margin: 5px 0 15px;
+        height: 10px;
+        overflow: hidden;
+    }
+
+    .progress {
+        background-color: #0094ff;
+        height: 100%;
+        border-radius: 3px;
+    }
+
+
+    /* footer components */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
