@@ -5,8 +5,11 @@
         padding: 0;
         color: #333;
         background-color: #f4f4f9;
-        background: linear-gradient(135deg, #f0f0f0 25%, #d3d3d3 100%);
-        animation: gradientBackground 10s infinite alternate;
+        background-image: url('Images/seabeach.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; /* let the background fixed when pages scrolling */
     }
 
     @keyframes gradientBackground {
@@ -32,8 +35,10 @@
         max-width: 900px;
         margin: 10px auto;
         padding: 25px;
-        background-color: #f4f4f9;
+        background-color: rgba(244, 244, 249, 0.8); 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /*opacity:0.8;*/
+        font-family:'Times New Roman',Times,serif;
     }
 
     .about {
@@ -125,8 +130,24 @@
 
     }
 
+    /* Playlist Section */
+    .playlist h2 {
+        cursor: pointer;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .content {
+        display: none; /* hidden first, use js to control on/off */
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
     .playlist p{
         margin-top:5px;
+        font-weight:bold;
     }
 
     /* outlink component*/
@@ -152,6 +173,9 @@
         background-color: #f9f9f9;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity:1;
+        margin-bottom:5px;
+        margin-top:5px;
     }
 
     .contact h2{
@@ -241,6 +265,7 @@
         background-color: #0094ff;
         height: 100%;
         border-radius: 3px;
+        transition: width 1s ease; /* smoothy transition to achieve animation */
     }
 
 
@@ -251,4 +276,24 @@
         text-align: center;
         padding: 10px;
         margin-top: 20px;
+    }
+
+    #backToTop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-family:'Times New Roman',serif;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none; 
+        transition: opacity 0.3s;
+    }
+
+    #backToTop:hover {
+        background-color: #555;
     }

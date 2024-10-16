@@ -18,23 +18,23 @@
     <div class="container">
         <section class="about">
             <img src="Images/profile.jpg" alt="Profile Pic" class="img_style1">
-            <h2 class="about_left_title">Name & Nickname:</h2>
-            <p class="left_text_form1">Leo.Johnson</p>
+            <h2 class="about_left_title"><i>Name & Nickname:</i></h2>
+            <p class="left_text_form1">LiangChen(Leo.Johnson)</p>
         </section>
 
         <section class="skills">
-            <h2 class="skill_left_title">Skills:</h2>
+            <h2 class="skill_left_title"><i>Skills:</i></h2>
             <p class="skill_left_text_form1">Python, C++, C#, MySQL, HTML,etc.</p>
         </section>
 
         <section class="introduction">
-            <h2 class="introduction_title">Introduction:</h2>
+            <h2 class="introduction_title"><i>Introduction:</i></h2>
             <p class="introduction_text">I'm Leo.Johnson, a passionate student from HongKong Polytechnical University. I love to work with technologies like computer graphics, rendering and GPU acceleration.</p>
             <p class="introduction_text">My hometown is GuangZhou, in GuangDong province, China. I finish my undergraduation in JNU, major in computer science. In 2023 fall, I was admitted to PolyU as a MSc IT.</p>
         </section>
 
         <section class="interest">
-            <h2 class="interest_title">Interest:</h2>
+            <h2 class="interest_title"><i>Interest:</i></h2>
             <ul>
                 <li><strong>Physical Engine:</strong>  The techniques about physical engine like Unity, Unreal, and game developing.</li>
                 <li><strong>Computer Graphics:</strong>  The techniques of CG and GPU acceleration is attracting for myself.</li>
@@ -42,33 +42,36 @@
             </ul>
 
         </section>
+
         <!-- playlist -->
         <section class="playlist">
-            <h2>My Playlist</h2>
-            <audio controls>
-                <source src="Music/グリーングリーンズ.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <audio controls>
-                <source src="Music/飛べ! 星のカービィ.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <p>Here, you can listen to the song I recommended.</p>
+            <h2 onclick="togglePlaylist()"><i>My Playlist</i></h2>
+            <div id="playlist-content" class="content">
+                <audio controls>
+                    <source src="Music/グリーングリーンズ.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="Music/飛べ! 星のカービィ.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <p>Here, you can click the "My Playlist" button to open or scroll the play audio to listen to the music I recommended.</p>
         </section>
 
+        <!-- outerlinks -->
         <section class="outerlink">
-            <h2>Recommended Webpage</h2>
+            <h2><i>Recommended Webpage</i></h2>
             <p class="outerlink_head">You can check this outer links and enjoy yourself by the following interesting webpages:</p>
-            <p class="outerlink_list">Weights&Biases, an AI developer platform which can deploy and fine-tuning models:</p>
+            <p class="outerlink_list" style="color:darkviolet"><i><b>Weights&Biases</b></i>, an AI developer platform which can deploy and fine-tuning models:</p>
             <a href="https://wandb.ai/site" target="_blank">Go now!</a>
-            <p class="outerlink_list">A blog that introducing the basis of building 2D pixel arts, interesting type of games:</p>
+            <p class="outerlink_list" style="color:dodgerblue">A blog that introducing the basis of building <i><b>2D pixel arts</b></i>, interesting type of games:</p>
             <a href="https://gamemaker.io/zh-CN/blog/make-pixel-art-2d-games" target="_blank">Go now!</a>
-            <p class="outerlink_list">Documentation for Unity HDRP, useful and essential for the developer:</p>
+            <p class="outerlink_list" style="color:royalblue">Documentation for <i><b>Unity HDRP</b></i>, useful and essential for the developer:</p>
             <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@15.0/manual/index.html" target="_blank">Go now!</a>
-
         </section>
-        
 
+        <!-- the contact component -->
         <section class="contact">
             <h2>Contact Me</h2>
             <form action="javascript:void(0);" onsubmit="showMessageBox()">
@@ -93,17 +96,7 @@
             </div>
         </div>
 
-        <!-- the JS script banding to the messagebox-->
-        <script>
-            function showMessageBox() {
-                document.getElementById("messageBox").style.display = "flex";
-            }
-
-            function closeMessageBox() {
-                document.getElementById("messageBox").style.display = "none";
-            }
-        </script>
-
+        <!-- the skill bar randomize component-->
         <section class="skills_bar">
             <h2>Level of Skills</h2>
             <div class="skill">
@@ -125,17 +118,79 @@
                 </div>
             </div>
         </section>
-
-
     </div>
+
+    <!-- a bottom can return to the top of page-->
+    <button id="backToTop" onclick="scrollToTop()">↑ Top</button>
 
     <!-- footer -->
     <footer>
-        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <p>&copy; 2024 Leo.Johnson. All rights reserved.</p>
 
     </footer>
 
+    <script> //the js scripts of the html component
+        // playlist script
+        function togglePlaylist() {
+            const content = document.getElementById("playlist-content");
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
 
+        // the script of tips window messagebox 
+        function showMessageBox() {
+            document.getElementById("messageBox").style.display = "flex";
+        }
+
+        function closeMessageBox() {
+            document.getElementById("messageBox").style.display = "none";
+        }
+
+        // randomize the width border of progress bar
+        function setRandomWidth() {
+            const progressBars = document.querySelectorAll('.progress');
+
+            // randomize the initial border
+            progressBars.forEach(progress => {
+                const randomWidth = Math.floor(Math.random() * 101) + '%'; // 随机宽度 0% - 100%
+                progress.style.width = randomWidth;
+            });
+        }
+
+        function initializeProgressBars() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(progress => {
+                progress.style.width = Math.floor(Math.random() * 101) + '%';
+            });
+        }
+
+        // execution script of progress bar, initialize the border and randomly change per seconds
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeProgressBars(); 
+            setInterval(setRandomWidth, 1000); // execute per 1 second
+        });
+
+        // creat a back-to-top button, and control the logic of display
+        function toggleButtonVisibility() {
+            const backToTopButton = document.getElementById("backToTop");
+            // when the page scroll from top after 100 px, the button will appear, or disappear
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        // when the page is scrolling, continuelly call the visibility function
+        window.onscroll = function () { toggleButtonVisibility(); };
+
+        // define a function banding to the top button, return to the top when click
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 
 </body>
 </html>
